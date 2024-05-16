@@ -2,7 +2,7 @@ import React from 'react'
 import ShortLink from './ShortLink'
 
 export default async function Dashboard() {
-  const response = await fetch('http://localhost:3000/api/link',{method:"GET",cache:'no-store'})
+  const response = await fetch(`${process.env.NEXT_PUBLIC_URL}api/link`,{method:"GET",cache:'no-store'})
   const result = await response.json()
   return (
     <>

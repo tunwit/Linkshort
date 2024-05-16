@@ -19,7 +19,7 @@ export default function ShortenForm() {
     const onsubmithandler = async (e) =>{
         setDisable(true)
         e.preventDefault()
-        const response = await fetch('http://localhost:3000/api/link',{
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}api/link`,{
             method:"POST",
             body:JSON.stringify({
                 'origin':Link

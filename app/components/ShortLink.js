@@ -10,7 +10,7 @@ export default function ShortLink({id,origin}) {
 
   const handledelete = async (e) => {
     SetHidden(true)
-    const response = await fetch('http://localhost:3000/api/link',{
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}api/link`,{
             method:"DELETE",
             body:JSON.stringify({
                 'id':id
