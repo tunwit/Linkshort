@@ -27,7 +27,6 @@ export default async function page({params}) {
             </div>
         )
     }
-    console.log(result);
     redirect(result.origin)
   return (
     <div>page</div>
